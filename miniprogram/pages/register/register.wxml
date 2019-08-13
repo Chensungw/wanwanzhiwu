@@ -1,0 +1,65 @@
+<!--pages/register/register.wxml-->
+<view >
+  <view>
+    <image style="width:100%" mode="aspectFill" src="./img/1.png"></image>
+  </view>
+  <vant-row>
+    <van-col offset="1" span="22">
+      <van-cell-group name="formTest">
+    <van-field 
+      value="{{ username }}"
+      left-icon="contact"
+      placeholder="请输入姓名"
+      bind:blur="getUsername"
+    />
+
+    <van-field 
+      value="{{ phone }}" 
+      type="number"
+      placeholder="请输入手机号码" 
+      left-icon="phone-o" 
+      bind:blur="getPhone" 
+    />
+
+    <van-field 
+      value="{{ birthday }}" 
+      type="date"
+      placeholder="{{birDate}}" 
+      left-icon="calender-o" 
+      bind:input="getBirthday" 
+      disabled
+      >
+      <van-button bind:click="showDate" slot="button" size="normal" type="default">点击选择日期   
+      </van-button>
+    </van-field>
+    <text>\n</text>
+    
+    <!--注册按钮-->
+    <van-button
+      type="primary"
+      round
+      size="large" 
+      bind:click="registerMember"
+      >
+      注册会员
+    </van-button>
+  </van-cell-group>
+    </van-col>
+    
+  </vant-row>
+
+  <van-popup style="width:100%" show="{{ show }}" bind:close="onClose" position="bottom">
+    <van-datetime-picker
+    type="date"
+    value="{{ currentDate }}"
+    bind:input="onInput"
+    min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
+    formatter="{{ formatter }}"
+    bind:cancel="cancelPopup"
+    bind:confirm="confirmPopup"
+    />
+    
+  </van-popup>
+</view>
+

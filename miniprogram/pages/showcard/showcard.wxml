@@ -1,0 +1,56 @@
+<!--pages/showcard/showcard.wxml-->
+<view>
+  <van-col span="24">
+    <view class="margin-new" style="margin: 30rpx 30rpx 0rpx 30rpx">
+      <cover-view style="height:420rpx">
+        <cover-image 
+          style="border-radius: 20rpx" 
+          src="./img/vip1.png">
+        </cover-image>
+      </cover-view>
+    </view>
+  </van-col>
+</view>
+
+<view >
+  <van-cell-group >
+    <van-field
+      value="{{username}}"
+      label="姓名"
+      left-icon="contact"
+      disabled
+      size="small"
+      border="{{ true }}"
+    />
+    <van-field
+      value="{{phone}}"
+      label="手机号码"
+      left-icon="phone-o"
+      disabled
+      border="{{ true }}"
+    />
+    <van-field
+      value="{{birthday}}"
+      label="生日"
+      left-icon="calender-o"
+      disabled
+      border="{{ true }}"
+      use-button-slot
+    />
+  </van-cell-group>
+
+  <view>
+    <van-col offset="1" span="22">
+      <text>\n\n</text>
+      <view>
+        <van-icon name="vip-card-o" />
+        <text decode="true" style="font-size:27rpx">
+          会员卡在本店消费均可永久享受8.5折优惠(特价商品除外)
+          请在会员消费时出示此卡,会员卡的最终解释权归本店所有
+          地址：广州番禺区南村镇乐购城&ensp;&ensp;&ensp;&ensp;电话：13424026411
+        </text>
+      </view>
+    </van-col>
+  </view>
+</view>
+

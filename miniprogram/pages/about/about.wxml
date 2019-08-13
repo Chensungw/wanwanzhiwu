@@ -1,0 +1,19 @@
+<!--pages/about/about.wxml-->
+<view style="text-align:center" >
+  <!-- <text style="font-size:25rpx">欢迎来到婉婉之屋!</text> -->
+  <van-row>
+    <van-col span="24">
+      <view class="margin-new">
+        <cover-view style="height:100%">
+          <cover-image 
+            style="border-radius: 15rpx" 
+            src="./img/1.jpg">
+          </cover-image>
+        </cover-view>
+      </view>
+    </van-col>
+  </van-row>
+  <!-- <image mode='aspectFit' src="./img/1.png"></image> -->
+  
+</view>
+

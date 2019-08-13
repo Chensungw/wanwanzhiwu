@@ -1,0 +1,80 @@
+<!--index.wxml-->
+
+<!-- 轮播图 -->
+<view style="margin: 15rpx 15rpx 50rpx 15rpx">
+<view style="margin-bottom:40rpx">
+  <swiper 
+    class='u-wrp-bnr' 
+    indicator-dots='true' 
+    autoplay='true' 
+    interval='5000' 
+    duration='1000' 
+    circular='true'>
+    <block wx:for="{{bnrUrl}}" wx:key="index">
+      <swiper-item>
+        <image 
+          style="border-radius: 15rpx" 
+          src='{{item.url}}' 
+          class='u-img-slide' 
+          mode='aspectFill'>
+        </image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 功能模块 -->
+<view style="margin-bottom:30rpx">
+  <van-row>
+    <van-col span="12">
+      <view class="margin-new">
+        <cover-view style="height:520rpx">
+          <cover-image 
+            bindtap="clickImg_1" 
+            style="border-radius: 15rpx" 
+            src="./img/img_1.png">
+          </cover-image>
+        </cover-view>
+      </view>
+    </van-col>
+    <van-col span="12">
+      <view class="margin-new" style="margin-bottom:20rpx">
+        <cover-view style="height:250rpx">
+          <cover-image 
+            bindtap="clickImg_2"
+            style="border-radius: 15rpx" 
+            src="./img/img_2.png">
+          </cover-image>
+        </cover-view>
+      </view>
+      <view class="margin-new">
+        <cover-view style="height:250rpx">
+          <cover-image 
+            bindtap="clickImg_3"
+            style="border-radius: 15rpx" 
+            src="./img/img_3.png">
+          </cover-image>
+        </cover-view>
+      </view>
+    </van-col>
+  </van-row>
+</view>
+
+<!-- 联系我们 -->
+<view style="text-align:center" >
+  <van-row>
+    <van-col span="24">
+      <view class="margin-new">
+        <cover-view style="height:220rpx">
+          <cover-image 
+            style="border-radius: 15rpx" 
+            src="./img/down.png">
+          </cover-image>
+        </cover-view>
+      </view>
+    </van-col>
+  </van-row>
+</view>
+</view>
+
+
